@@ -2,13 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
  
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float moveSpeed;
     public Vector2 forceToApply;
     public Vector2 PlayerInput;
     public float forceDamping;
+    public static PlayerController instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Update()
     {
