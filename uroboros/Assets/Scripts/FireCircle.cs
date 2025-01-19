@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FireBullets : MonoBehaviour
+public class FireCircle : MonoBehaviour
 {
     [SerializeField] private int bulletsAmount = 13;
     [SerializeField] private float startAngle = 0f, endAngle = 360f, fireRate;
