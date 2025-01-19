@@ -9,15 +9,18 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 forceToApply;
     public Vector2 PlayerInput;
     public float forceDamping;
+
     void Update()
     {
-        PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
+
     void FixedUpdate()
     {
-        Vector2 moveForce = PlayerInput * moveSpeed;
+        Vector2 moveForce = PlayerInput.normalized * moveSpeed;
         moveForce += forceToApply;
         forceToApply /= forceDamping;
+
         if (Mathf.Abs(forceToApply.x) <= 0.01f && Mathf.Abs(forceToApply.y) <= 0.01f)
         {
             forceToApply = Vector2.zero;
