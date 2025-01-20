@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 6420018885731761297}
   - component: {fileID: -6962755637227465259}
   m_Layer: 0
-  m_Name: LineBullet
+  m_Name: SpiralBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

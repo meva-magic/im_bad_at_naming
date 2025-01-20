@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2688447324976619824}
   - component: {fileID: 6146278411570099935}
-  - component: {fileID: 8907321060588755501}
+  - component: {fileID: 1743762182296956857}
   m_Layer: 0
   m_Name: AimBullet
   m_TagString: Bullet
@@ -70,7 +70,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.25
---- !u!114 &8907321060588755501
+--- !u!114 &1743762182296956857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,11 +79,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 718549546727176296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e71521e972a13a409f34a35c899a4eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 752e4210494447b49b0bcc60080a270e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDistance: 0.1
-  destroyAfter: 2
+  moveSpeed: 3.5
 --- !u!1 &5639548912237091714
 GameObject:
   m_ObjectHideFlags: 0

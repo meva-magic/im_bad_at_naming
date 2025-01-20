@@ -6,6 +6,7 @@ public class CurveBullet : MonoBehaviour
 {
     [SerializeField] private Vector2 moveDirection;
     [SerializeField] private float moveSpeed;
+    public float rotationSpeed = 50.0f;
     private float destroyTimer = 3f;
 
     private void OnEnable()
@@ -15,6 +16,8 @@ public class CurveBullet : MonoBehaviour
 
     private void Update()
     {
+        transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
+        
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
     }
 
@@ -26,6 +29,14 @@ public class CurveBullet : MonoBehaviour
     private void Destroy()
     {
         gameObject.SetActive(false);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Destroy();
+        }
     }
 
     private void OnDisable()
