@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletPool : MonoBehaviour
+public class CurveBulletPool : MonoBehaviour
 {
-    public static BulletPool instance;
+    public static CurveBulletPool instance;
 
     [SerializeField] private GameObject poolBullet;
     private bool notEnoughBulletsInPool = true;

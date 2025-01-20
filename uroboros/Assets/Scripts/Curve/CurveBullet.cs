@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class CurveBullet : MonoBehaviour
 {
     [SerializeField] private Vector2 moveDirection;
     [SerializeField] private float moveSpeed;
