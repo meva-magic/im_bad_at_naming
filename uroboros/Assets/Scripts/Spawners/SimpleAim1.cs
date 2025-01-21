@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AimSpawner : MonoBehaviour
+public class DoubleAim : MonoBehaviour
 {
     private float timeBtwShots;
     public float startTimeBtwShots;
 
-    public GameObject bullet;
+    [SerializeField] private GameObject bullet;
 
     private void Start()
     {
-        Instantiate(bullet, transform.position, Quaternion.identity);
         timeBtwShots = startTimeBtwShots;
     }
 

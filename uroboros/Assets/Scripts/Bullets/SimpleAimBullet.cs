@@ -5,6 +5,7 @@ public class AimBullets : MonoBehaviour
     public float moveSpeed;
     private Transform player;
     private Vector2 target;
+    [SerializeField] private GameObject emitterPref;
 
     private void Start()
     {
@@ -20,6 +21,8 @@ public class AimBullets : MonoBehaviour
         if (transform.position.x == target.x && transform.position.y == target.y)
         {
             DestroyBullet();
+            GameObject emitter = Instantiate(emitterPref, transform.position, Quaternion.identity);
+            Destroy(emitter, 10f);
         }
     }
 

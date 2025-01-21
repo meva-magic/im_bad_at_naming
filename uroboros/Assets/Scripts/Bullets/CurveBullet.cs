@@ -6,8 +6,8 @@ public class CurveBullet : MonoBehaviour
 {
     [SerializeField] private Vector2 moveDirection;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float destroyTimer = 3f;
     public float rotationSpeed = 50.0f;
-    private float destroyTimer = 3f;
 
     private void OnEnable()
     {

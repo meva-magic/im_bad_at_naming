@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        SetMenu();
+        //SetMenu();
     }
 
     private void Update()
