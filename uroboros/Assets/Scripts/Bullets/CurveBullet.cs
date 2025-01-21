@@ -36,6 +36,7 @@ public class CurveBullet : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Destroy();
+            PlayerHealth.instance.TakeDamage(10);
         }
     }
 

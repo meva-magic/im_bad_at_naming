@@ -28,6 +28,7 @@ public class AimBullets : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             DestroyBullet();
+            PlayerHealth.instance.TakeDamage(20);
         }
     }
 
